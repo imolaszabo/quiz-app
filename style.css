@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+    background-color: #F5F7FB;
+    font-family: "Karla", sans-serif;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    gap: 2em;
+    padding: 6em 5em;
+    text-align: center;
+    color: #293264;
+    background-color: #F5F7FB;  
+    margin: 0;
+}
+
+button {
+    border: none;
+    background: #4D5B9E;
+    color: #F5F7FB;
+    border-radius: 15px;
+    width: 12em;
+    height: 3em;
+    cursor: pointer;
+    font-family: inherit;
+    margin: 1em auto;
+    font-size: 1.2em;
+}
+
+button#start-button {
+    font-size: 1.2em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 1em;
+  padding-bottom: 1.5em;
+}
+
+fieldset {
+  border: none;
+  border-bottom: 1px solid #DBDEF0;
+  margin: 0;
+  padding: 1.3em 0;
+}
+
+div.answers {
+  display: flex;
+  gap: 1.8em;
+}
+.question {
+  margin: 0;
+  padding: 0;
+  color: #293264;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+input[type="radio"] {
+  opacity: 0;
+  position: absolute;
+  left: -9999px;
+  } 
+
+label {
+  display: inline-block;
+  padding: .5em 1.5em;
+  font-family: inherit;
+  border: 2px solid #4D5B9E;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: .8em;
+}
+
+label:has(input[type="radio"]:checked).answer-button {
+  background-color: #D6DBF5;
+  color: #293264;
+  border: none;
+}
+/* These come after and are more specific */
+label:has(input[type="radio"]).answer-button.correct {
+  background-color: #94D7A2;
+  border: none;
+}
+
+label:has(input[type="radio"]:checked).answer-button.wrong {
+  background-color: #F8BCBC;
+  border: none;
+}
+
+label:has(input[type="radio"]).answer-button.disabled {
+  opacity: 0.5;
+}
+
+div#final {
+  display: flex;
+  flex-direction: column;
+}
+
+div#final > span {
+  display: inline-block;
+  margin: auto;
+  padding: 0;
+  color: #293264;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+
